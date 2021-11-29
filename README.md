@@ -27,12 +27,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-##Objetivo
+## Objetivo
 Construir una plataforma para solicitar préstamos, que apruebe o rechace las solicitudes del
 cliente según los siguientes criterios.
-##Objetivos específicos
+## Objetivos específicos
 ● Crear un componente de préstamos que le permita al usuario elegir el monto a solicitar
 entre un valor mínimo y un valor máximo (ej. vlr. min. 10.000 - vlr. máx. 100.000).
+
 ● Desarrollar un sistema que permita crear usuarios con los siguientes parámetros:
 - Nombre
 - Correo
