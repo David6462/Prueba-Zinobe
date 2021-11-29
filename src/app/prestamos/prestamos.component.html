@@ -1,0 +1,9 @@
+<div class="">
+    <label for="monto">Monto a solicitar</label>
+    <input type="number" class="form-control" id="monto" placeholder="Digite su monto" [(ngModel)]="valorEnviar"
+        (change)="enviarValor()">
+</div>
+<div class="">
+    <label for="fecha_pagar">Fecha a pagar</label>
+    <input type="date" class="form-control" id="fecha_pagar" [(ngModel)]="fechaEnviar" (change)="enviarFecha()">
+</div>

@@ -1,0 +1,33 @@
+<div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Cédula</th>
+                <th scope="col">Valor Prestado</th>
+                <th scope="col">Fecha entrega</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Servicios</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of datos">
+                <td>{{ item['id'] }}</td>
+                <td>{{ item['nombre'] }}</td>
+                <td>{{ item['email'] }}</td>
+                <td>{{ item['cedula'] }}</td>
+                <td>{{ item['valor_prestamo'] }}</td>
+                <td>{{ item['fecha_limite'] }}</td>
+                <td>{{ item['estado'] }}</td>
+                <td *ngIf="item['estado'] == 'Aprobado'">
+                    <button class="btn btn-success" (click)="editarPrestamo(item)">
+                        Pagar
+                    </button>
+                </td>
+                <td *ngIf="item['estado'] != 'Aprobado'">{{ item['estado'] }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,63 @@
+<div class="row ">
+    <div class="card col-md-5 mx-auto mt-3">
+        <div class="card-body">
+            <form [formGroup]="form" (ngSubmit)="guardarForm($event)">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Digite su nombre"
+                        formControlName="nombre" required>
+                    <div *ngIf="nombre?.touched">
+                        <small>
+                            <strong class="text-danger" *ngIf="nombre?.hasError('required')">Campo
+                                requerido</strong>
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com"
+                        formControlName="email" required>
+                    <div *ngIf="email?.touched">
+                        <small>
+                            <strong class="text-danger" *ngIf="email?.hasError('required')">Campo
+                                requerido</strong>
+                        </small>
+                        <small>
+                            <strong class="text-danger" *ngIf="email?.hasError('email')">Correo Inválido</strong>
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="cedula">Cédula</label>
+                    <input type="text" class="form-control" id="cedula" placeholder="Digite su cédula"
+                        formControlName="cedula" required>
+                    <div *ngIf="cedula?.touched">
+                        <small>
+                            <strong class="text-danger" *ngIf="cedula?.hasError('required')">Campo
+                                requerido</strong>
+                        </small>
+                        <small>
+                            <strong class="text-danger" *ngIf="cedula?.hasError('minlength')">Cédula Inválida</strong>
+                        </small>
+                    </div>
+                </div>
+                <div>
+                    <app-prestamos (valorPrestamo)="getValor($event)" (fechaLimite)="getFecha($event)"></app-prestamos>
+                </div>
+                <div class="form-group">
+                    <label>Estado</label>
+                    <input class="form-control" formControlName="estado" [(ngModel)]="estado" readonly>
+                </div>
+                <br />
+                <button type="submit" class="btn btn-success"
+                    *ngIf="!form.invalid && (valorPrestamo > 10000 && valorPrestamo < 100000)">Guardar</button>
+            </form>
+        </div>
+    </div>
+    <!-- <div class="card col-md-5 mx-auto mt-3">
+        <div class="card-body">
+            
+        </div>
+    </div> -->
+</div>

@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  capital_base: 1000000,
+  baseUrl: 'http://localhost:3000/prestamo',
+  montoUrl: 'http://localhost:3000/monto'
 };
 
 /*

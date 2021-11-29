@@ -1,0 +1,46 @@
+{
+  "monto": [
+    {
+      "id": 1,
+      "monto_base": 1011000
+    }
+  ],
+  "prestamo": [
+    {
+      "id": 1,
+      "nombre": "David",
+      "email": "david@test.com",
+      "cedula": "1192770921",
+      "valor_prestamo": 11000,
+      "fecha_limite": "2021-11-30",
+      "estado": "Pagado"
+    },
+    {
+      "id": 2,
+      "nombre": "Michael",
+      "email": "michael@gmail.com",
+      "cedula": "123456789",
+      "valor_prestamo": 12000,
+      "fecha_limite": "2021-11-28T23:41:09.745Z",
+      "estado": "Aprobado"
+    },
+    {
+      "id": 3,
+      "nombre": "Felipe",
+      "email": "felipe@gmail.com",
+      "cedula": "9876543231",
+      "valor_prestamo": 15000,
+      "fecha_limite": "2021-11-28T23:43:05.456Z",
+      "estado": "Pendiente"
+    },
+    {
+      "id": 4,
+      "nombre": "Oscar",
+      "email": "oscarc90@gmail.com",
+      "cedula": "258147369",
+      "valor_prestamo": 15000,
+      "fecha_limite": "2021-11-29T01:39:00.207Z",
+      "estado": "Pendiente"
+    }
+  ]
+}
